@@ -1,0 +1,29 @@
+import java.io.*;
+class dasium
+{
+    public static void main(String args[])throws IOException
+    {
+        int r=0;
+        BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("enter the number");
+        int n=Integer.parseInt(br.readLine());
+        int t=n;int sum=0;int m=0;int i=0;
+        while(t>0)
+        {
+          m=t%10;
+          r=r*10+m;
+          t=t/10;
+        }
+        int p=r;
+        while(p>0)
+        {
+         i++;
+         sum=sum+(int)Math.pow(p%10,i);
+         p=p/10;
+        }
+        if(sum==n)
+        System.out.println("no. is dasium");
+        else
+        System.out.println("no. is not dasium");
+    }
+}
